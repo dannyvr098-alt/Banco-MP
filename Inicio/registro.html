@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+        <main class="contenedor-registro">
+         <div class="caja-blanca">
+                <div class="encabezado">
+                    <div class="logo-mp">MP</div>
+                         <h1>Crear Cuenta</h1>
+                         <p class="Instrucción"> Completa todos los campos para registrarte</p>
+                        
+                  </div>
+            </div>
+                 <form action="#" id="form-registro">
+              <div class="campo">
+                        <label for="documento"> Cédula o Pasaporte * </label>
+                        <input type="text" id="documento" required>
+            </div>   
+
+                    <div class="campo">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" required>
+                 </div>
+
+                 <div class="campo">
+                    <label for="celular">Celular *</label>
+                    <input type="tel" id="celular" placeholder="3001234567" required>
+                </div>
+
+                <div class="campo">
+                    <label for="usuario">Usuario *</label>
+                    <input type="text" id="usuario" placeholder="Usuario único" required>
+                </div>
+
+                <div class="campo">
+                    <label for="tipo-cliente">Tipo de Cliente</label>
+                    <select id="tipo-cliente">
+                        <option value="basico">Básico</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="riesgo">Nivel de Riesgo Crediticio</label>
+                    <select id="riesgo">
+                        <option value="bajo">Bajo</option>
+                        <option value="medio" selected>Medio</option>
+                        <option value="alto">Alto</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="pass">Contraseña *</label>
+                    <input type="password" id="pass" required>
+                </div>
+
+                <div class="campo">
+                    <label for="confirm-pass">Confirmar Contraseña *</label>
+                    <input type="password" id="confirm-pass" required>
+                </div>
+
+                <button type="submit" class="boton-registro">Registrarse</button>
+                 </form>
+                 <div class="enlace-ayuda">
+                    <p>¿Ya tienes una cuenta? <a href="ingreso.html">Inicia sesión aquí</a></p>
+
+                 </div>
+        </main>
+           <script src="logica-registro.js"></script>
+</body>
+</html>

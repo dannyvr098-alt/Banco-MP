@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="ingreso.css">
+</head>
+<body>
+        <main id="pantalla-ingreso">
+             <div class="caja-formulario">
+                 <div class="logotipo-mini">MI PLATA </div>
+                 <h2> Banco en línea </h2>
+                 <p class="subtitulo">Ingresa tus credenciales para continuar</p>
+
+                    <div class=" alerta-intentos">
+                        Intentos de acceso: <span id="contador">0</span> de 3 </div>
+                   <form action="formulario-login">
+                 <div class="grupo-entrada">
+                        <label for="usuario">Usuario</label>
+                         <input type="text" id="usuario" placeholder="Ej: daniela_viv" required>
+                </div>
+                            <div class="grupo-entrada">
+                                    <label for="clave">Contraseña</label>
+                                    <input type="password" id="clave" placeholder="......." required>
+                            </div>
+                                    <button type="submit" class="boton-entrar">Entrar al Sistema</button>
+                         </form>     
+             </div>
+                    <div class="enlace-ayuda">
+                         <a href="#">¿Olvidaste tu clave?</a>
+                         <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+                    </div>
+                
+        </main>
+                <script src="logica-ingreso.js"></script>
+</body>
+</html>

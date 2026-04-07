@@ -1,0 +1,133 @@
+:root {
+    --verde-principal: #00a86b;
+    --verde-oscuro: #008f5a;
+    --gris-fondo: #f4f7f6;
+    --gris-input: #f2f4f7;
+    --blanco: #ffffff;
+    --rojo-alerta: #e74c3c;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--gris-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#pantalla-ingreso {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.caja-formulario {
+    background-color: var(--blanco);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* El logo "MI PLATA" */
+.logotipo-mini {
+    background-color: var(--verde-principal);
+    color: white;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+h2 {
+    color: var(--verde-principal);
+    margin: 10px 0;
+}
+
+.subtitulo {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Alerta de intentos */
+.alerta-intentos {
+    background-color: #fdf2f2;
+    color: var(--rojo-alerta);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    border: 1px solid #facaca;
+}
+
+/* Inputs y Labels */
+.grupo-entrada {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.grupo-entrada label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.grupo-entrada input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--gris-input);
+    box-sizing: border-box; /* Para que el padding no ensanche el input */
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.grupo-entrada input:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+}
+
+/* Botón entrar */
+.boton-entrar {
+    background-color: var(--verde-principal);
+    color: white;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-entrar:hover {
+    background-color: var(--verde-oscuro);
+}
+
+/* Enlaces de ayuda y registro */
+.enlace-ayuda {
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+.enlace-ayuda a {
+    color: var(--verde-principal);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.enlace-ayuda a:hover {
+    text-decoration: underline;
+}
+
+.enlace-ayuda p {
+    color: #666;
+    margin-top: 10px;
+}

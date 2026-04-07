@@ -1,0 +1,117 @@
+:root {
+    --verde-mp: #00A86B;
+    --gris-claro: #f2f4f7;
+    --texto-oscuro: #333;
+    --texto-suave: #666;
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.contenedor-registro {
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+}
+
+.caja-blanca {
+    background: #fff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Logo y Títulos */
+.encabezado {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-mp {
+    background-color: var(--verde-mp);
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 0 auto 15px;
+}
+
+h1 {
+    color: var(--verde-mp);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.instruccion {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Estilo de los campos */
+.campo {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.campo label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: var(--texto-oscuro);
+}
+
+.campo input, .campo select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: var(--gris-claro);
+    font-size: 0.95rem;
+    box-sizing: border-box; /* Evita que el padding ensanche el input */
+    outline: none;
+    transition: 0.3s;
+}
+
+.campo input::placeholder {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.campo input:focus {
+    border-color: var(--verde-mp);
+    background-color: #fff;
+}
+
+/* Botón Registrarse */
+.boton-registro {
+    background-color: var(--verde-mp);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.boton-registro:hover {
+    background-color: #008f5a;
+}

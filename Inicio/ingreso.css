@@ -53,15 +53,23 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Alerta de intentos */
+/* --- MODIFICACIÓN AQUÍ --- */
 .alerta-intentos {
+    display: none; /* Oculto por defecto para un diseño más limpio */
     background-color: #fdf2f2;
     color: var(--rojo-alerta);
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
     font-size: 0.85rem;
     margin-bottom: 20px;
     border: 1px solid #facaca;
+    animation: fadeIn 0.3s ease-in; /* Pequeña animación al aparecer */
+}
+
+/* Animación suave para cuando el JS la muestre */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Inputs y Labels */
@@ -83,7 +91,7 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: var(--gris-input);
-    box-sizing: border-box; /* Para que el padding no ensanche el input */
+    box-sizing: border-box;
     font-size: 1rem;
     transition: border-color 0.3s;
 }

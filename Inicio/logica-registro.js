@@ -23,8 +23,8 @@ document.getElementById('form-registro').addEventListener('submit', function(eve
  }
 
  alert("Registro exitoso. ¡Bienvenido a Mi Plata!");
- localStorage.setItem('usuario', usuario.value);
- localStorage.setItem('clave', pass.value);
+ localStorage.setItem('usuarioRegistrado', documento);
+ localStorage.setItem('claveRegistada', pass);
  window.location.href="ingreso.html";
 
 }

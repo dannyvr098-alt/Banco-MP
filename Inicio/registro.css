@@ -1,117 +1,155 @@
-:root {
-    --verde-mp: #00A86B;
-    --gris-claro: #f2f4f7;
-    --texto-oscuro: #333;
-    --texto-suave: #666;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #fff0f6 0%, #ffe4f0 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
 
 .contenedor-registro {
-    width: 100%;
-    max-width: 420px;
-    padding: 15px;
+  max-width: 440px;
+  width: 100%;
 }
 
+/* ── Encabezado ── */
 .caja-blanca {
-    background: #fff;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background: #ffffff;
+  border-radius: 24px 24px 0 0;
+  padding: 2rem 2rem 1.5rem;
+  border: 1.5px solid #f7a8c8;
+  border-bottom: none;
 }
 
-/* Logo y Títulos */
 .encabezado {
-    text-align: center;
-    margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .logo-mp {
-    background-color: var(--verde-mp);
-    color: white;
-    width: 65px;
-    height: 65px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.8rem;
-    margin: 0 auto 15px;
+  width: 56px;
+  height: 56px;
+  background: #ff2d8a;
+  color: #ffffff;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
 }
 
-h1 {
-    color: var(--verde-mp);
-    font-size: 1.8rem;
-    margin: 0;
+.encabezado h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #7b1040;
+  margin-bottom: 0.3rem;
 }
 
-.instruccion {
-    color: var(--texto-suave);
-    font-size: 0.9rem;
-    margin-top: 5px;
+.Instrucción {
+  font-size: 14px;
+  color: #b0456e;
 }
 
-/* Estilo de los campos */
+/* ── Formulario ── */
+#form-registro {
+  background: #ffffff;
+  padding: 1.25rem 2rem;
+  border: 1.5px solid #f7a8c8;
+  border-top: none;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 .campo {
-    margin-bottom: 18px;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .campo label {
-    display: block;
-    font-weight: 600;
-    font-size: 0.85rem;
-    margin-bottom: 6px;
-    color: var(--texto-oscuro);
+  font-size: 13px;
+  font-weight: 600;
+  color: #7b1040;
 }
 
-.campo input, .campo select {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background-color: var(--gris-claro);
-    font-size: 0.95rem;
-    box-sizing: border-box; /* Evita que el padding ensanche el input */
-    outline: none;
-    transition: 0.3s;
+.campo input,
+.campo select {
+  border: 1.5px solid #f7a8c8;
+  border-radius: 12px;
+  padding: 11px 14px;
+  font-size: 14px;
+  color: #7b1040;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
 }
 
 .campo input::placeholder {
-    color: #999;
-    font-size: 0.9rem;
+  color: #f7a8c8;
 }
 
-.campo input:focus {
-    border-color: var(--verde-mp);
-    background-color: #fff;
+.campo input:focus,
+.campo select:focus {
+  border-color: #ff2d8a;
 }
 
-/* Botón Registrarse */
+.campo select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ff69b0' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
 .boton-registro {
-    background-color: var(--verde-mp);
-    color: white;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.3s;
+  width: 100%;
+  background: #ff2d8a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 4px;
 }
 
 .boton-registro:hover {
-    background-color: #008f5a;
+  background: #7b1040;
+}
+
+/* ── Enlace inferior ── */
+.enlace-ayuda {
+  background: #ffffff;
+  border-radius: 0 0 24px 24px;
+  border: 1.5px solid #f7a8c8;
+  border-top: none;
+  padding: 1rem 2rem 1.5rem;
+  text-align: center;
+  font-size: 13px;
+  color: #b0456e;
+}
+
+.enlace-ayuda a {
+  color: #ff2d8a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.enlace-ayuda a:hover {
+  color: #7b1040;
 }

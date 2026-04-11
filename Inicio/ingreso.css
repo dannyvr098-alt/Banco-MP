@@ -1,141 +1,148 @@
-:root {
-    --verde-principal: #00a86b;
-    --verde-oscuro: #008f5a;
-    --gris-fondo: #f4f7f6;
-    --gris-input: #f2f4f7;
-    --blanco: #ffffff;
-    --rojo-alerta: #e74c3c;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--gris-fondo);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #fff0f6 0%, #ffe4f0 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
 
 #pantalla-ingreso {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
+/* ── Caja principal ── */
 .caja-formulario {
-    background-color: var(--blanco);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    text-align: center;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  max-width: 400px;
+  width: 100%;
+  border: 1.5px solid #f7a8c8;
+  box-shadow: 0 4px 32px rgba(255, 45, 138, 0.10);
+  margin-bottom: 1.25rem;
 }
 
-/* El logo "MI PLATA" */
 .logotipo-mini {
-    background-color: var(--verde-principal);
-    color: white;
-    width: fit-content;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    margin: 0 auto 15px;
+  background: #ff2d8a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  padding: 6px 14px;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
-h2 {
-    color: var(--verde-principal);
-    margin: 10px 0;
+.caja-formulario h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #7b1040;
+  margin-bottom: 0.3rem;
 }
 
 .subtitulo {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+  font-size: 14px;
+  color: #b0456e;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
 }
 
-/* --- MODIFICACIÓN AQUÍ --- */
+/* ── Alerta intentos ── */
 .alerta-intentos {
-    display: none; /* Oculto por defecto para un diseño más limpio */
-    background-color: #fdf2f2;
-    color: var(--rojo-alerta);
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    margin-bottom: 20px;
-    border: 1px solid #facaca;
-    animation: fadeIn 0.3s ease-in; /* Pequeña animación al aparecer */
+  background: #fff0f6;
+  border: 1px solid #f7a8c8;
+  border-radius: 10px;
+  padding: 9px 14px;
+  font-size: 13px;
+  color: #7b1040;
+  margin-bottom: 1.25rem;
 }
 
-/* Animación suave para cuando el JS la muestre */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+.alerta-intentos span {
+  font-weight: 700;
+  color: #ff2d8a;
 }
 
-/* Inputs y Labels */
+/* ── Formulario ── */
 .grupo-entrada {
-    text-align: left;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .grupo-entrada label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  color: #7b1040;
+  margin-bottom: 6px;
 }
 
 .grupo-entrada input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: var(--gris-input);
-    box-sizing: border-box;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+  border: 1.5px solid #f7a8c8;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  color: #7b1040;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.grupo-entrada input::placeholder {
+  color: #f7a8c8;
 }
 
 .grupo-entrada input:focus {
-    outline: none;
-    border-color: var(--verde-principal);
+  border-color: #ff2d8a;
 }
 
-/* Botón entrar */
 .boton-entrar {
-    background-color: var(--verde-principal);
-    color: white;
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
+  width: 100%;
+  background: #ff2d8a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 .boton-entrar:hover {
-    background-color: var(--verde-oscuro);
+  background: #7b1040;
 }
 
-/* Enlaces de ayuda y registro */
+/* ── Enlaces ── */
 .enlace-ayuda {
-    margin-top: 25px;
-    font-size: 0.9rem;
+  text-align: center;
+  font-size: 13px;
+  color: #b0456e;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .enlace-ayuda a {
-    color: var(--verde-principal);
-    text-decoration: none;
-    font-weight: 500;
+  color: #ff2d8a;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .enlace-ayuda a:hover {
-    text-decoration: underline;
-}
-
-.enlace-ayuda p {
-    color: #666;
-    margin-top: 10px;
+  color: #7b1040;
 }
